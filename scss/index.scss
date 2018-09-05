@@ -1,0 +1,66 @@
+@import 'custom';
+@import '~bootswatch/dist/sketchy/variables';
+@import '~bootstrap/scss/bootstrap';
+@import '~bootswatch/dist/sketchy/bootswatch';
+
+#main-nav{
+    background-color: rgb(122, 186, 241) !important;
+}
+
+#fbutton{
+    color:violet;
+}
+
+
+#gt{
+    font-weight: bold;
+    color: rgb(251, 255, 0)
+}
+
+.body{
+    background-color: rgb(107, 22, 107);
+}
+
+.newer{
+    text-align: center;
+}
+
+.newer2{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.ultra{
+        background: url(/img-project/bahamas.jpg) no-repeat;
+        background-size: cover;
+        height: 750px;
+        width: 100%;
+}
+
+
+.ultra2{
+   margin-top: 5%;
+   margin-bottom: 5%;
+   margin-left : 5%;
+   margin-right: 5%;
+}
+
+#badgey{
+   text-align: center;
+}
+
+#badgey2{
+    text-align: center;
+}
+
+.jumbotron{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+.follow-ups label{
+    color: whitesmoke;
+}

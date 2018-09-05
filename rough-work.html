@@ -1,0 +1,109 @@
+components i can include 
+
+
+
+Components
+
+    Alerts
+    Badge
+    Breadcrumb
+    Buttons
+    Button group
+    Card
+    Carousel
+    Collapse
+    Dropdowns
+    Forms
+    Input group
+    Jumbotron
+    List group
+    Modal
+    Navs
+    Navbar
+    Pagination
+    Popovers
+    Progress
+    Scrollspy
+    Tooltips 
+
+
+
+Globetrotters -> name of my website
+
+@import 'custom';
+//@import '~bootswatch/dist/name/variables';
+@import '~bootstrap/scss/bootstrap';
+//@import '~bootswatch/dist/name/bootswatch';
+
+
+
+
+
+module.exports = 
+
+
+
+{
+  entry: './index.js'  ,
+  output: 
+  {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  } ,
+
+  module: 
+     {
+          rules: [
+                   {
+                            test: /\.(scss)$/  ,
+                            use: 
+                                [
+                                            {  loader: 'style-loader', // inject CSS to page }  , 
+                                            {  loader: 'css-loader', // translates CSS into CommonJS modules }  , 
+                                            {  loader: 'postcss-loader', // Run post css actions
+
+                                                    options: {
+                                                                    plugins: function () 
+                                                                    { // post css plugins, can be exported to postcss.config.js
+                                                                            return [ require('precss'), require('autoprefixer') ];
+                                                                    }
+                                                            }
+                                            }  , 
+                                            {
+                                                loader: 'sass-loader' // compiles Sass to CSS
+                                            }
+                                ]
+		           },
+
+		           {
+                            test: /\.(png|jpg|gif|svg|jpeg)$/ ,
+ 		                    loader:  'file-loader',
+                               options: {
+                                          name: '[path][name].[ext]'
+                                        }
+                   }
+
+
+                ]
+
+    } ,
+
+ 
+
+  plugins: [
+
+    new HtmlWebpackPlugin({
+
+      template: './index.html',
+
+      inject: 'head'
+
+    })
+
+  ],
+
+  mode: 'development'
+
+}
+
+/home/aman/week3_bootstrap/img-project/globe-asia-solid(1).png
